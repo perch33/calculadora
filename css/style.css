@@ -95,6 +95,7 @@ button {
   -o-border-radius: 50%;
 }
 
+/* maquetación de los botones */
 .buttons {
   display: grid;
   grid-template-columns: 60px 60px 60px 60px;
