@@ -34,3 +34,4 @@ themeTogglerBtn.onclick = () => {
   themeTogglerBtn.classList.toggle("active");
   isDark = !isDark
 };
+
