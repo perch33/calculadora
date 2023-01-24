@@ -19,7 +19,7 @@ const soundButton = new Audio("/sound/button__sound.wav");
 const soundChangeTheme = new Audio("/sound/Long-Pop.wav");
 
 buttons.forEach((item) => {
-  item.onclick = () => {
+  item.addEventListener("click", () => {
     soundButton.play();
     if (item.id == "clear") {
       display.innerText = "";
@@ -35,7 +35,7 @@ buttons.forEach((item) => {
     } else {
       display.innerText += item.id;
     }
-  };
+  });
 });
 
 themeTogglerBtn.addEventListener("click", () => {
