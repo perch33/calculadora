@@ -2,11 +2,11 @@
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  transition: all 500ms;
-  -webkit-transition: all 500ms;
-  -moz-transition: all 500ms;
-  -ms-transition: all 500ms;
-  -o-transition: all 500ms;
+  transition: all 0.8s;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 30px rgb(187, 130, 130);
-  background-color: rgb(4, 0, 0);
+  background-color: #fff;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -53,11 +53,11 @@ body {
 
 .active {
   background-color: #000;
-  transition: all 500ms;
-  -webkit-transition: all 500ms;
-  -moz-transition: all 500ms;
-  -ms-transition: all 500ms;
-  -o-transition: all 500ms;
+  transition: all 0.8s;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  -o-transition: all 0.8s;
 }
 
 .display {
@@ -66,6 +66,7 @@ body {
   height: 120px;
   width: auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   justify-content: flex-end;
   font-size: 30px;
@@ -135,4 +136,29 @@ button:hover {
   grid-column-start: 4;
   grid-row-start: 4;
   grid-row-end: 6;
+}
+
+.display__light {
+  color: #000;
+}
+
+.dark {
+  background-color: #000;
+}
+
+.btn-number__light {
+  background-color: #85bddc;
+}
+
+.btn-operator__light {
+  background-color: #e29edc;
+}
+
+.clear__light {
+  background-color: #ffd5d8;
+  color: #fc4552;
+}
+.btn-equal__light{
+  background-color: #49bda2;
+  color: #000;
 }

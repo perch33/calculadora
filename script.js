@@ -2,8 +2,25 @@ const display = document.getElementById("display");
 
 const buttons = document.querySelectorAll("button");
 
+const themeTogglerBtn = document.querySelector(".theme-toggler");
+
+const calculator = document.querySelector(".calculator");
+
+const btnNumbers = document.querySelectorAll(".btn-number");
+
+const btnOperators = document.querySelectorAll(".btn-operator");
+
+const btnClear = document.querySelector(".clear");
+
+const btnEqual = document.querySelector(".btn-equal");
+
+const soundButton = new Audio("/sound/button__sound.wav");
+
+const soundChangeTheme = new Audio("/sound/Long-Pop.wav");
+
 buttons.forEach((item) => {
   item.onclick = () => {
+    soundButton.play();
     if (item.id == "clear") {
       display.innerText = "";
     } else if (item.id == "backspace") {
@@ -21,17 +38,17 @@ buttons.forEach((item) => {
   };
 });
 
-const themeTogglerBtn = document.querySelector(".theme-toggler");
-
-const calculator = document.querySelector(".calculator");
-
-const togglerIcon = document.querySelector(".toggler-icon");
-
-let isDark = true;
-
-themeTogglerBtn.onclick = () => {
+themeTogglerBtn.addEventListener("click", () => {
+  soundChangeTheme.play();
+  display.classList.toggle("display__light");
+  btnClear.classList.toggle("clear__light");
+  btnOperators.forEach((btnOperator) =>
+    btnOperator.classList.toggle("btn-operator__light")
+  );
   calculator.classList.toggle("dark");
   themeTogglerBtn.classList.toggle("active");
-  isDark = !isDark
-};
-
+  btnEqual.classList.toggle("btn-equal__light");
+  btnNumbers.forEach((btnNumber) =>
+    btnNumber.classList.toggle("btn-number__light")
+  );
+});
