@@ -14,7 +14,7 @@ const btnClear = document.querySelector(".clear");
 
 const btnEqual = document.querySelector(".btn-equal");
 
-const soundButton = new Audio("/sound/button__sound.wav");
+const soundButton = new Audio("sound/button__sound.wav");
 
 const soundChangeTheme = new Audio("sound/Long-Pop.wav");
 
