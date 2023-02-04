@@ -16,7 +16,7 @@ const btnEqual = document.querySelector(".btn-equal");
 
 const soundButton = new Audio("/sound/button__sound.wav");
 
-const soundChangeTheme = new Audio("/sound/Long-Pop.wav");
+const soundChangeTheme = new Audio("sound/Long-Pop.wav");
 
 buttons.forEach((item) => {
   item.addEventListener("click", () => {
