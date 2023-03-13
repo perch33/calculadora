@@ -18,9 +18,15 @@ const soundButton = new Audio("sound/button__sound.wav");
 
 const soundChangeTheme = new Audio("sound/Long-Pop.wav");
 
+const tocar = (botones) => {
+  botones.pause();
+  botones.currentTime = 0;
+  botones.play();
+};
+
 buttons.forEach((item) => {
   item.addEventListener("click", () => {
-    soundButton.play();
+    tocar(soundButton);
     if (item.id == "clear") {
       display.innerText = "";
     } else if (item.id == "backspace") {
@@ -39,7 +45,7 @@ buttons.forEach((item) => {
 });
 
 themeTogglerBtn.addEventListener("click", () => {
-  soundChangeTheme.play();
+  tocar(soundChangeTheme);
   display.classList.toggle("display__light");
   btnClear.classList.toggle("clear__light");
   btnOperators.forEach((btnOperator) =>
