@@ -27,6 +27,7 @@ const tocar = (botones) => {
 buttons.forEach((item) => {
   item.addEventListener("click", () => {
     tocar(soundButton);
+
     if (item.id == "clear") {
       display.innerText = "";
     } else if (item.id == "backspace") {
@@ -41,6 +42,34 @@ buttons.forEach((item) => {
     } else {
       display.innerText += item.id;
     }
+    /* let date = ["/", "+", "-", "*", "."]; */
+
+    let texto = display.textContent;
+
+    texto = texto
+      .replaceAll("//", "/")
+      .replaceAll("++", "+")
+      .replaceAll("--", "-")
+      .replaceAll("**", "*")
+      .replaceAll("..", ".") 
+      .replaceAll("+-", "-")
+      .replaceAll("+*", "*")
+      .replaceAll("+/", "/")
+      .replaceAll("-+", "+")
+      .replaceAll("-*", "*")
+      .replaceAll("-/", "/")
+      .replaceAll("*+", "+")
+      .replaceAll("*-", "-")
+      .replaceAll("*/", "/")
+      .replaceAll("/+", "+")
+      .replaceAll("/-", "-")
+      .replaceAll("/*", "*")
+      .replaceAll(".+", "+")
+      .replaceAll(".-", "-")
+      .replaceAll(".*", "*")
+      .replaceAll("./", "/");
+
+    display.textContent = texto;
   });
 });
 
